@@ -5,7 +5,7 @@ A Flight Scheduler built with Spring/Hibernate for CSCI 4448 Object Oriented Pro
 
 | Full Name: | GitHub ID |
 | ---------- | --------- |
-| Brian Chung |  |
+| Brian Chung | chungb2015 |
 | Byron Becker | ByronBecker |
 | Cory Morales | Barroth42 |
 | Johnathan Kruse | AKNucoder |
