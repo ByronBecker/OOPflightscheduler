@@ -6,7 +6,12 @@
 		<link type="text/css" rel="stylesheet" href="css/style1.css"/>
 	</head>
 	<body>
+		<div id="logout">
+			<h3> Logged in as: <span id="user"></span></h3>
+			<button  onclick="logout()"> Logout </button>
+		</div>
 		<h1> Flight Scheduler </h1>
+		
 
 		<h2> Main GUI </h2>
 		
