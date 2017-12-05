@@ -33,14 +33,7 @@
 	
 		<!-- Mention here all the model classes along with their package name -->
 		<mapping class ="com.kruse.hibernate.Student_Info"/>
-		<mapping class ="com.kruse.hibernate.Flights"/>
-		
-	
-		<!--  <mapping resource="org/hibernate/test/legacy/Simple.hbm.xml"/> -->
-		<!-- <class-cache
-			class="org.hibernate.test.legacy.Simple"
-			region="Simple"
-			usage="read-write"/> -->
+		<mapping class ="com.kruse.hibernate.Flight"/>
 			
 	</session-factory>
 </hibernate-configuration>
