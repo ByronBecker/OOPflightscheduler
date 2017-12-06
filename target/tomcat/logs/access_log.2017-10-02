@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [02/Oct/2017:22:56:04 -0700] "GET /SpringMVCTutorial HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [02/Oct/2017:22:56:04 -0700] "GET /SpringMVCTutorial/ HTTP/1.1" 200 52 http-bio-8080-exec-2 576
+0:0:0:0:0:0:0:1 - - [02/Oct/2017:22:56:04 -0700] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [02/Oct/2017:22:57:05 -0700] "GET /SpringMVCTutorial/ HTTP/1.1" 200 52 http-bio-8080-exec-5 1

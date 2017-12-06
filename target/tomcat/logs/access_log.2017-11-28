@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [28/Nov/2017:17:51:07 -0700] "GET /SpringMVCTutorial/ HTTP/1.1" 200 52 http-bio-8080-exec-1 74
+0:0:0:0:0:0:0:1 - - [28/Nov/2017:17:53:41 -0700] "GET /SpringMVCTutorial/welcomeMessage.jsp HTTP/1.1" 200 37 http-bio-8080-exec-3 792
+0:0:0:0:0:0:0:1 - - [28/Nov/2017:17:54:53 -0700] "GET /SpringMVCTutorial/welcome HTTP/1.1" 404 1001 http-bio-8080-exec-5 18
+0:0:0:0:0:0:0:1 - - [28/Nov/2017:17:59:25 -0700] "GET /SpringMVCTutorial/welcome HTTP/1.1" 404 1001 http-bio-8080-exec-7 2
+0:0:0:0:0:0:0:1 - - [28/Nov/2017:18:01:58 -0700] "GET /SpringMVCTutorial/welcome HTTP/1.1" 404 1001 http-bio-8080-exec-9 4
+0:0:0:0:0:0:0:1 - - [28/Nov/2017:18:02:01 -0700] "GET /SpringMVCTutorial/welcome HTTP/1.1" 404 1001 http-bio-8080-exec-10 1
+0:0:0:0:0:0:0:1 - - [28/Nov/2017:18:02:05 -0700] "GET /SpringMVCTutorial/welcome HTTP/1.1" 404 1001 http-bio-8080-exec-10 2
+0:0:0:0:0:0:0:1 - - [28/Nov/2017:18:02:05 -0700] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-10 0
