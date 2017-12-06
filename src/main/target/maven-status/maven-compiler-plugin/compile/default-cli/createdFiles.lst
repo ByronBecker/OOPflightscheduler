@@ -1,0 +1,6 @@
+spring/config/AppConfig.class
+spring/controllers/FrontController.class
+spring/controllers/HelloController.class
+spring/config/AppInitializer.class
+spring/controllers/LoginController.class
+spring/controllers/WelcomeController.class
