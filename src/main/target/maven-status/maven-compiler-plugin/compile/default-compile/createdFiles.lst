@@ -1,4 +1,4 @@
-spring/controllers/FrontController.class
 spring/config/AppConfig.class
 spring/config/AppInitializer.class
+spring/controllers/FrontController.class
 spring/controllers/WelcomeController.class

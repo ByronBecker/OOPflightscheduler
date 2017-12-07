@@ -63,5 +63,5 @@ let populateContent = (content_type) => {
 
 let logout = () => {
 	//also need to make call to db to sign out
-	location.href = "http://localhost:8080/FlightScheduler_FrontEnd/login";
+	location.href = "http://localhost:8080/flight_scheduler/login";
 }
