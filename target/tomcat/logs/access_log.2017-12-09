@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [09/Dec/2017:10:02:43 -0700] "GET /flight_scheduler HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [09/Dec/2017:10:02:43 -0700] "GET /flight_scheduler/ HTTP/1.1" 200 470 http-bio-8080-exec-2 595
+0:0:0:0:0:0:0:1 - - [09/Dec/2017:10:02:44 -0700] "GET /flight_scheduler/%3Cc:url%20value='/css/style1.css'%20/%3E HTTP/1.1" 404 1067 http-bio-8080-exec-3 20
+0:0:0:0:0:0:0:1 - - [09/Dec/2017:10:02:44 -0700] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0

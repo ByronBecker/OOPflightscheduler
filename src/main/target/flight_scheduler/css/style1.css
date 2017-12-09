@@ -1,0 +1,41 @@
+body {
+    background-color: beige;
+}
+
+#front_gui {
+	position: relative;
+	margin: 0 auto;
+	height: 60%;
+	width: fit-content;
+	background-color: lightblue;
+}
+
+#logout {
+	position: relative;
+	float: right;
+}
+
+#container {
+	width: fit-content;
+	position: relative;
+	margin: 0 auto;
+	padding-top: 15;
+	
+}
+
+ul {
+	position: center;
+	margin: 0;
+}
+
+ul li{
+	display: inline;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.item {
+	background-color: white;
+	border: 1px solid black;
+	padding: 5px;
+}
