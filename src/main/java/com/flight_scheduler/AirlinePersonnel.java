@@ -7,7 +7,7 @@ public class AirlinePersonnel {
     
     private int user_id;
     private String airline_name;
-    private ArrayList<int> currentflights;
+    //private ArrayList<int> currentflights;
 
     public AirlinePersonnel(int user_id, String airline_name) {
         
@@ -18,7 +18,7 @@ public class AirlinePersonnel {
         return this.airline_name;
     }
 
-    public Flight makeFlight(LocalDateTime early_time, LocalDateTime late_time, boolean critical_status, String departure_location, String arrival_location) {
+    public void /*Flight*/ makeFlight(LocalDateTime early_time, LocalDateTime late_time, boolean critical_status, String departure_location, String arrival_location) {
 
     }
 
