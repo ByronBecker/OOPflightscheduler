@@ -6,5 +6,5 @@
 public interface Observer {
 	 public Arraylist<int> checkRecentUpdates();
 	 
-	 public void updateNolifications(String airline, int flightNumber, boolean approved);
+	 public void updateNotifications(String airline, int flightNumber, boolean approved);
 }
