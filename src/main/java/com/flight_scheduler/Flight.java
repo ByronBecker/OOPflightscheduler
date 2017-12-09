@@ -1,49 +1,45 @@
 package com.flight_scheduler;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 
 @Entity
 @Table(name="FLIGHT_INFORMATION")
-public class Flight {
+public class Flight{
 	
 	@Id
 	private int flight_number;
 	private int model_number;
 	private int priority_status;
-	private String airline;
 	private String gate;
-	private String departure_location;
-	private String arrival_location;
 	private boolean departing;
-	private LocalDateTime early_time;
-	private LocalDateTime late_time;
-	private boolean critical_status;
-	
-	
-	
-	public Flight() {
-		super();
-	}
+    private LocalDateTime departure_time;
+    private LocalDateTime arrival_time;
 
-	public Flight(int flight_number, int model_number, int priority_status, String airline, String gate, String departure_location, String arrival_location,
-				  Boolean departing, LocalDateTime early_time, LocalDateTime late_time, Boolean critical_status){
-		super();
+    @Embedded
+	private FlightInfo flight_Info;
+	
+	
+	
+	public Flight() {	}
 
+	public Flight(int flight_number,
+                  int model_number,
+                  int priority_status,
+                  String gate,
+                  Boolean departing,
+                  LocalDateTime departure_time,
+                  LocalDateTime arrival_time,
+                  FlightInfo flight_info){
 		this.flight_number = flight_number;
 		this.model_number = model_number;
 		this.priority_status = priority_status;
-		this.airline = airline;;
 		this.gate = gate;
-		this.departure_location = departure_location;
-		this.arrival_location = arrival_location;
 		this.departing = departing;
-		this.early_time = early_time;
-		this.late_time = late_time;
-		this.critical_status = critical_status;
+		this.departure_time = departure_time;
+		this.arrival_time = arrival_time;
+		this.flight_Info = flight_info;
 	}
 
 	public int getFlight_number() {
@@ -70,14 +66,6 @@ public class Flight {
 		this.priority_status = priority_status;
 	}
 
-	public String getAirline() {
-		return airline;
-	}
-
-	public void setAirline(String airline) {
-		this.airline = airline;
-	}
-
 	public String getGate() {
 		return gate;
 	}
@@ -86,56 +74,45 @@ public class Flight {
 		this.gate = gate;
 	}
 
-	public String getDeparture_location() {
-		return departure_location;
-	}
-
-	public void setDeparture_location(String departure_location) {
-		this.departure_location = departure_location;
-	}
-
-	public String getArrival_location() {
-		return arrival_location;
-	}
-
-	public void setArrival_location(String arrival_location) {
-		this.arrival_location = arrival_location;
-	}
-
-	public boolean isIs_departure() {
+	public boolean isDeparting() {
 		return departing;
 	}
 
-	public void setIs_departure(boolean departing) {
+	public void setDeparting(boolean departing) {
 		this.departing = departing;
 	}
 
-	public LocalDateTime getEarly_time() {
-		return early_time;
+    public void setFlightTimes(LocalDateTime departure_time, LocalDateTime arrival_time){
+		this.departure_time = departure_time;
+		this.arrival_time = arrival_time;
 	}
 
-	public void setEarly_time(LocalDateTime early_time) {
-		this.early_time = early_time;
-	}
+    public LocalDateTime[] getTimeSlot(){
+        LocalDateTime time_slot[] = {flight_Info.getEarly_time(), flight_Info.getLate_time()};
+        return time_slot;
+    }
 
-	public LocalDateTime getLate_time() {
-		return late_time;
-	}
+    public FlightInfo getFlight_Info() {
+        return flight_Info;
+    }
 
-	public void setLate_time(LocalDateTime late_time) {
-		this.late_time = late_time;
-	}
+    public void setFlight_Info(FlightInfo flight_Info) {
+        this.flight_Info = flight_Info;
+    }
 
-	public boolean isCritical_status() {
-		return critical_status;
-	}
+    public LocalDateTime getDeparture_time() {
+        return departure_time;
+    }
 
-	public void setCritical_status(boolean critical_status) {
-		this.critical_status = critical_status;
-	}
+    public void setDeparture_time(LocalDateTime departure_time) {
+        this.departure_time = departure_time;
+    }
 
-	public void setTimeSlot(LocalDateTime early_time, LocalDateTime late_time){
-		this.early_time = early_time;
-		this.late_time = late_time;
-	}
+    public LocalDateTime getArrival_time() {
+        return arrival_time;
+    }
+
+    public void setArrival_time(LocalDateTime arrival_time) {
+        this.arrival_time = arrival_time;
+    }
 }
