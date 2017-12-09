@@ -1,10 +1,10 @@
-com/flight_scheduler/Flight.class
-spring/controllers/FrontController.class
-spring/controllers/HelloController.class
 spring/controllers/LoginController.class
 spring/config/AppConfig.class
 com/flight_scheduler/HibernateTutorial.class
+spring/config/AppInitializer.class
+com/flight_scheduler/Flight.class
+spring/controllers/FrontController.class
+spring/controllers/HelloController.class
 com/flight_scheduler/HibernateUtil.class
 com/flight_scheduler/Main.class
-spring/config/AppInitializer.class
 spring/controllers/WelcomeController.class
