@@ -27,19 +27,21 @@ public class HibernateTutorial {
 		String file_name = "main/resources/DummyFlights.txt";
 		writeToDatabaseinBatch(file_name, session_factory);
 		*/
-		
+
 		//*WRITING* A single flight to db
 		Flight flight_to_Write = new Flight(flight_number,
-											747,
-											1,
-											"Southwest Airlines",
+                                            747,
+                                            2,
 											"A1",
-											"Denver, CO",
-											"Austin, TX",
-											true,
-											LocalDateTime.of(2017, Month.DECEMBER, 29, 4, 30, 0),
-											LocalDateTime.of(2017, Month.DECEMBER, 29, 6, 40, 0),
-											false);
+                                            true,
+                                            LocalDateTime.of(2017, Month.DECEMBER, 29, 4, 30, 0),
+                                            LocalDateTime.of(2017, Month.DECEMBER, 29, 6, 40, 0),
+                                            new FlightInfo( LocalDateTime.of(2017, Month.DECEMBER, 29, 0, 0, 0),
+                                                            LocalDateTime.of(2017, Month.DECEMBER, 29, 8, 0, 0),
+                                                            false,
+                                                            "Denver, CO",
+                                                            "Austin, TX",
+                                                            "Southwest Airlines"));
 		writeFlightToDatabase(flight_to_Write);
 		
 		//*READING* All flights stored in db
@@ -54,7 +56,7 @@ public class HibernateTutorial {
 		
 		//*MODIFY* The single flight in the db read from above if it was found in the db.
 		if (flight_read != null) {
-			flight_read.setArrival_location("Anchorage, AK");
+			flight_read.setGate("A2");
 			updateFlightFromDatabase(flight_read);
 		} else {
 			System.out.println("Error: Flight with number: "+ flight_number + " not found");
@@ -72,6 +74,8 @@ public class HibernateTutorial {
 		
 		
 		session_factory.close();
+		
+		
 	}
 
 	/*
@@ -98,6 +102,8 @@ public class HibernateTutorial {
 		session.beginTransaction();
 		
 		Flight flight = session.get(Flight.class, flight_number);
+		
+		System.out.println("flight number of flight pulled is: " + flight.getFlight_number());
 		
 		session.getTransaction().commit();
 		session.close();
@@ -173,14 +179,16 @@ public class HibernateTutorial {
 			System.out.println("Flight Number: 			" + flight.getFlight_number());
 			System.out.println("Model Number: 			" + flight.getModel_number());
 			System.out.println("Priority Status: 		" + flight.getPriority_status());
-			System.out.println("Airline: 				" + flight.getAirline());
+			System.out.println("Airline: 				" + flight.getFlight_Info().getAirline());
 			System.out.println("Gate: 					" + flight.getGate());
-			System.out.println("Departure Location: 	" + flight.getDeparture_location());
-			System.out.println("Arrival Location: 		" + flight.getArrival_location());
-			System.out.println("Is Departing: 			" + flight.isIs_departure());
-			System.out.println("Early Time: 			" + flight.getEarly_time());
-			System.out.println("Late Time:            	" + flight.getLate_time());
-			System.out.println("Critical Status Time: 	" + flight.isCritical_status() + "\n");
+			System.out.println("Departure Location: 	" + flight.getFlight_Info().getDeparture_location());
+			System.out.println("Arrival Location: 		" + flight.getFlight_Info().getArrival_location());
+			System.out.println("Is Departing: 			" + flight.isDeparting());
+            System.out.println("Departure Time: 		" + flight.getArrival_time());
+            System.out.println("Arrival Time:          	" + flight.getDeparture_time());
+			System.out.println("Early Time: 			" + flight.getFlight_Info().getEarly_time());
+			System.out.println("Late Time:            	" + flight.getFlight_Info().getLate_time());
+			System.out.println("Critical Status Time: 	" + flight.getFlight_Info().isCritical_status() + "\n");
 		}
 	}
 
