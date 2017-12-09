@@ -74,6 +74,8 @@ public class HibernateTutorial {
 		
 		
 		session_factory.close();
+		
+		
 	}
 
 	/*
@@ -100,6 +102,8 @@ public class HibernateTutorial {
 		session.beginTransaction();
 		
 		Flight flight = session.get(Flight.class, flight_number);
+		
+		System.out.println("flight number of flight pulled is: " + flight.getFlight_number());
 		
 		session.getTransaction().commit();
 		session.close();
