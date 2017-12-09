@@ -1,13 +1,13 @@
 package com.flight_scheduler;
 
-import java.time.LocalDateTime;
-import java.time.Month;
-
-import org.hibernate.SessionFactory;
-
+import static junit.framework.Assert.assertTrue;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import org.hibernate.SessionFactory;
+
+import java.time.LocalDateTime;
+import java.time.Month;
 
 /**
  * Unit test for simple App.
@@ -32,17 +32,6 @@ public class HibernateTutorialTest
 	{
 		return new TestSuite( HibernateTutorialTest.class );
 	}
-
-	public void testApp()
-	{
-		assertTrue( true );
-	}
-
-	public void testSample()
-	{
-		//Do test here
-		assertTrue( true );
-	}
 	
 	public void testFlight() {
 		
@@ -58,18 +47,20 @@ public class HibernateTutorialTest
 		//*WRITING* A single flight to db
 		Flight flight_to_Write = new Flight(flight_number,
 											747,
-											1,
-											"Southwest Airlines",
+											2,
 											"A1",
-											"Denver, CO",
-											"Austin, TX",
 											true,
 											LocalDateTime.of(2017, Month.DECEMBER, 29, 4, 30, 0),
 											LocalDateTime.of(2017, Month.DECEMBER, 29, 6, 40, 0),
-											false);
-		HibernateTutorial.writeFlightToDatabase(flight_to_Write);
-		
-		
+											new FlightInfo( LocalDateTime.of(2017, Month.DECEMBER, 29, 0, 0, 0),
+													LocalDateTime.of(2017, Month.DECEMBER, 29, 8, 0, 0),
+													false,
+													"Denver, CO",
+													"Austin, TX",
+													"Southwest Airlines"));
+			HibernateTutorial.writeFlightToDatabase(flight_to_Write);
+
+
 		assertTrue(HibernateTutorial.readFlightFromDatabase(flight_number).getFlight_number() == flight_to_Write.getFlight_number());
 		
 		
@@ -77,5 +68,4 @@ public class HibernateTutorialTest
 		session_factory.close();
 		
 	}
-	
 }
