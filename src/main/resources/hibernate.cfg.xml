@@ -32,6 +32,7 @@
 		<!-- Mention here all the model classes along with their package name -->
 		<mapping class ="com.flight_scheduler.Flight"/>
 		<mapping class ="com.flight_scheduler.FlightInfo"/>
+		<mapping class ="com.flight_scheduler.AirlinePersonnel"/>
 			
 	</session-factory>
 </hibernate-configuration>
