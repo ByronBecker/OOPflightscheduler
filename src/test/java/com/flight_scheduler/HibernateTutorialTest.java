@@ -60,10 +60,7 @@ public class HibernateTutorialTest
 													"Southwest Airlines"));
 			HibernateTutorial.writeFlightToDatabase(flight_to_Write);
 
-
-		assertTrue(HibernateTutorial.readFlightFromDatabase(flight_number).getFlight_number() == flight_to_Write.getFlight_number());
-		
-		
+		assertTrue(HibernateTutorial.readFlightFromDatabase(flight_number).equals(flight_to_Write));
 		
 		session_factory.close();
 		

@@ -18,7 +18,7 @@ public class Flight{
     private LocalDateTime arrival_time;
 
     @Embedded
-	private FlightInfo flight_Info;
+	private FlightInfo flight_info;
 	
 	
 	
@@ -39,7 +39,7 @@ public class Flight{
 		this.departing = departing;
 		this.departure_time = departure_time;
 		this.arrival_time = arrival_time;
-		this.flight_Info = flight_info;
+		this.flight_info = flight_info;
 	}
 
 	public int getFlight_number() {
@@ -88,16 +88,16 @@ public class Flight{
 	}
 
     public LocalDateTime[] getTimeSlot(){
-        LocalDateTime time_slot[] = {flight_Info.getEarly_time(), flight_Info.getLate_time()};
+        LocalDateTime time_slot[] = {flight_info.getEarly_time(), flight_info.getLate_time()};
         return time_slot;
     }
 
     public FlightInfo getFlight_Info() {
-        return flight_Info;
+        return flight_info;
     }
 
     public void setFlight_Info(FlightInfo flight_Info) {
-        this.flight_Info = flight_Info;
+        this.flight_info = flight_Info;
     }
 
     public LocalDateTime getDeparture_time() {
@@ -115,4 +115,29 @@ public class Flight{
     public void setArrival_time(LocalDateTime arrival_time) {
         this.arrival_time = arrival_time;
     }
+
+    @Override
+	public boolean equals(Object object){
+
+    	if (object == this) {
+			return true;
+		}
+
+    	if (!(object instanceof Flight)){
+    		return false;
+		}
+
+		Flight flight = (Flight) object;
+
+		boolean equality = 	Integer.compare(this.flight_number,flight.getFlight_number()) == 0 &&
+							Integer.compare(this.model_number,flight.getModel_number()) == 0 &&
+							Integer.compare(this.priority_status, flight.getPriority_status()) == 0 &&
+							this.gate.equals(flight.getGate()) &&
+							this.departing == flight.isDeparting() &&
+							this.departure_time.isEqual(flight.getDeparture_time()) &&
+							this.arrival_time.isEqual(flight.getArrival_time()) &&
+							this.flight_info.equals(flight.getFlight_Info());
+
+    	return equality;
+	}
 }

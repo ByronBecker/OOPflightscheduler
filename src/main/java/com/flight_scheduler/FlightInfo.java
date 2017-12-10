@@ -55,4 +55,27 @@ public class FlightInfo {
     public String getAirline() {
         return airline;
     }
+
+    @Override
+    public boolean equals(Object object){
+
+	    if (object == this) {
+            return true;
+        }
+
+	    if (!(object instanceof FlightInfo)){
+            return false;
+        }
+
+        FlightInfo flight_info = (FlightInfo) object;
+
+        boolean equality = 	this.early_time.isEqual(flight_info.getEarly_time()) &&
+                            this.late_time.isEqual(flight_info.getLate_time()) &&
+                            this.critical_status    == flight_info.isCritical_status() &&
+                            this.departure_location.equals(flight_info.getDeparture_location()) &&
+                            this.arrival_location.equals(flight_info.getArrival_location()) &&
+                            this.airline.equals(flight_info.getAirline());
+
+        return equality;
+    }
 }

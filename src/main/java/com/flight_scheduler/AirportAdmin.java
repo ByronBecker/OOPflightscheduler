@@ -9,11 +9,12 @@ public class AirportAdmin {
 	}
 
 	public boolean changeFlightStatus(Flight flight, boolean status) {
-
+		return false;
 	}
 
 	public boolean assignFlightPriority(Flight flight, int priority) {
 
+		return false;
 	}
 
 	public void assignAirlinePriority(String airline, int priority) {
@@ -22,10 +23,12 @@ public class AirportAdmin {
 
 	public boolean approveFlightRequest(FlightInfo requested_flight, String explanation) {
 
+		return false;
 	}
 
 	public boolean confirm() {
 
+		return false;
 	}
 
 	public void setNumberOfGates(int number_gates) {
