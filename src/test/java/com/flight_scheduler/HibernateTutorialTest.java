@@ -62,7 +62,7 @@ public class HibernateTutorialTest
 
 		assertTrue(HibernateTutorial.readFlightFromDatabase(flight_number).equals(flight_to_Write));
 		
-		session_factory.close();
+		//session_factory.close();
 		
 	}
 }
