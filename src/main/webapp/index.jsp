@@ -14,7 +14,6 @@
 	<body>
 		<p>
 			Hello World! <br/>
-			<%out.print("Hello, Sample JSP code");%>
 		</p>
 		<button onclick="button1()"> click me </button>
 	</body>

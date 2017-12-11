@@ -24,6 +24,9 @@
         		console.log(username, password);
         		//console.log(name);
 			//alert(user);
+			sessionStorage.setItem('username', username);
+			location.href = "http://localhost:8080/flight_scheduler/front";	
+			
         }
         // -->
     </SCRIPT>
