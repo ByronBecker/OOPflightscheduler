@@ -4,9 +4,9 @@ package com.flight_scheduler;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-@Entity
-@Table(name="AIRLINEPERSONNEL_INFORMATION")
-public class AirlinePersonnel implements Observer{
+//@Entity
+//@Table(name="AIRLINEPERSONNEL_INFORMATION")
+public class AirlinePersonnel{ //implements Observer{
     
     private int user_id;
     private String airline_name;
@@ -44,16 +44,17 @@ public class AirlinePersonnel implements Observer{
     		else 
     			message = "FlightNumber " + flightNumber +" rejected";
     		
-		Session session = HibernateUtil.getSession_factory().openSession();
+		/*Session session = HibernateUtil.getSession_factory().openSession();
 		session.beginTransaction();
 		
 		session.save(this);
 		
 		session.getTransaction().commit();
 		session.close();
+		*/
     }
     
-    
+    /*
     public ArrayList<String> checkRecentUpdates(){
 		Session session = HibernateUtil.getSession_factory().openSession();
 		session.beginTransaction();
@@ -64,7 +65,7 @@ public class AirlinePersonnel implements Observer{
 		session.getTransaction().commit();
 		session.close();
 		
-		ArrayList<String> airline_personnel_messages = new ArrayList<String>;
+		ArrayList<String> airline_personnel_messages = new ArrayList<String>();
 		
 		for (AirlinePersonnel p: airline_personnel_messages) {
 			airline_personnel_messages.add(p.getMessage());
@@ -72,7 +73,7 @@ public class AirlinePersonnel implements Observer{
 		
 		return airline_personnel_messages;
     }
-    
+    */
     public String getMessage() {
         return message;
     }

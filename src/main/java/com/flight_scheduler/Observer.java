@@ -1,6 +1,7 @@
+import java.util.*;
 
 public interface Observer {
-	 public Arraylist<int> checkRecentUpdates();
+	 public ArrayList<Integer> checkRecentUpdates();
 
 	 public void updateNotifications(String airline, int flightNumber, boolean approved);
 }
