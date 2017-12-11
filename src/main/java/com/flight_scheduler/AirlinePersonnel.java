@@ -3,6 +3,13 @@ package com.flight_scheduler;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import com.flight_scheduler.HibernateUtil;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import java.time.*;
+import java.util.Iterator;
 
 //@Entity
 //@Table(name="AIRLINEPERSONNEL_INFORMATION")
@@ -12,6 +19,10 @@ public class AirlinePersonnel{ //implements Observer{
     private String airline_name;
     private String message;
     //private ArrayList<int> currentflights;
+    
+    public AirlinePersonnel() {
+
+    }
 
     public AirlinePersonnel(int user_id, String airline_name) {
     		this.user_id = user_id;
@@ -44,17 +55,17 @@ public class AirlinePersonnel{ //implements Observer{
     		else 
     			message = "FlightNumber " + flightNumber +" rejected";
     		
-		/*Session session = HibernateUtil.getSession_factory().openSession();
+		Session session = HibernateUtil.getSession_factory().openSession();
 		session.beginTransaction();
 		
 		session.save(this);
 		
 		session.getTransaction().commit();
 		session.close();
-		*/
+		
     }
     
-    /*
+    
     public ArrayList<String> checkRecentUpdates(){
 		Session session = HibernateUtil.getSession_factory().openSession();
 		session.beginTransaction();
@@ -67,13 +78,13 @@ public class AirlinePersonnel{ //implements Observer{
 		
 		ArrayList<String> airline_personnel_messages = new ArrayList<String>();
 		
-		for (AirlinePersonnel p: airline_personnel_messages) {
+		for (AirlinePersonnel p: personnel) {
 			airline_personnel_messages.add(p.getMessage());
 		}
 		
 		return airline_personnel_messages;
     }
-    */
+    
     public String getMessage() {
         return message;
     }

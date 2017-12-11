@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.flight_scheduler.HibernateTutorialTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.374 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.396 sec
