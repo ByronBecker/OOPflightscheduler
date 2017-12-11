@@ -10,6 +10,7 @@ spring/controllers/FrontController.class
 spring/controllers/HelloController.class
 com/flight_scheduler/AirlinePersonnel.class
 com/flight_scheduler/model/Users.class
+FlightChangeIterator.class
 com/flight_scheduler/Model.class
 com/flight_scheduler/AirportAdmin.class
 com/flight_scheduler/HibernateUtil.class

@@ -61,10 +61,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.flight_scheduler.ModelTest" name="testCancelFlights" time="0.009"/>
-  <testcase classname="com.flight_scheduler.ModelTest" name="testCancelFlightsByNumber" time="0.014"/>
-  <testcase classname="com.flight_scheduler.ModelTest" name="testCancelFlightsByTimeWindow_Airline" time="0.118"/>
-  <testcase classname="com.flight_scheduler.ModelTest" name="testCancelFlightsByTimeWindow" time="0.025"/>
-  <testcase classname="com.flight_scheduler.ModelTest" name="testGetFlightsByAirline" time="0.017"/>
+  <testcase classname="com.flight_scheduler.ModelTest" name="testCancelFlights" time="0.008"/>
+  <testcase classname="com.flight_scheduler.ModelTest" name="testCancelFlightsByNumber" time="0.016"/>
+  <testcase classname="com.flight_scheduler.ModelTest" name="testCancelFlightsByTimeWindow_Airline" time="0.117"/>
+  <testcase classname="com.flight_scheduler.ModelTest" name="testCancelFlightsByTimeWindow" time="0.024"/>
+  <testcase classname="com.flight_scheduler.ModelTest" name="testGetFlightsByAirline" time="0.018"/>
   <testcase classname="com.flight_scheduler.ModelTest" name="testGetFlightsbyTimeWindow" time="0.012"/>
 </testsuite>
