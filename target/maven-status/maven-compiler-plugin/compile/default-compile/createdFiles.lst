@@ -13,6 +13,7 @@ com/flight_scheduler/model/Users.class
 FlightChangeIterator.class
 com/flight_scheduler/Model.class
 com/flight_scheduler/AirportAdmin.class
+Controller.class
 com/flight_scheduler/HibernateUtil.class
 com/flight_scheduler/Main.class
 spring/controllers/WelcomeController.class
