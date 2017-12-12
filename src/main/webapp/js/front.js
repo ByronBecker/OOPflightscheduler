@@ -18,13 +18,13 @@ let content_dict = {
 
 		addFlight: "<div>" +
 					"<div> <br/>" +
-						"Time: <input /> : <input/> to <input/> : <input/> <br/>" +
-						"Date: <input type='date' /> <br/>" +
-						"<button> Departure </button> <button> Arrival </button> <br/>" +
-						"Departure Location: <input/> <br/>" +
-						"Arrival Location: <input/> <br/>" +
+						"Time (in hours): <input /> to <input/> <br/>" +
+        				"Departure Location: <input/> <br/>" +
+        				"Arrival Location: <input/> <br/>" +
 						"Priority <input type='checkbox'/> <br/>" +
-					"</div>" +
+        				"<button> Add Flight </button> <br/>" +
+
+        "</div>" +
 				"</div>",
 
 		cancelFlight: "<div>" +
@@ -50,7 +50,9 @@ let content_dict = {
 							"</div>" +
 					"</div> " +
 				" </div>",
-		recentChanges: "<div id='recent_list'>  </div>",
+		recentChanges: "<div id='recent_list'> <br/> " +
+		"Flight Added: Airline: UA, Flight #: 1, Gate: 1, Departure: 8am" +
+		"</div>",
 
 		}
 
